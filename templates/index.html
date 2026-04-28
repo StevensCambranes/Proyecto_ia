@@ -1,35 +1,32 @@
 {% extends 'base.html' %}
 
 {% block contenido %}
-<div class="welcome-view flex-grow-1 d-flex flex-column align-items-center justify-content-center p-4" id="welcomeView">
-    <div class="text-center mb-5">
-        <h1 class="fw-bold fs-3 mb-2">¡Bienvenido a <span class="text-primary">Gestia</span>!</h1>
-        <p class="text-body-secondary">Por el momento podemos enseñarte sobre estos 3 temas. ¿Con cuál quieres empezar?</p>
+<div class="chat-history hidden" id="chatHistory"></div>
+
+<div class="welcome-view" id="welcomeView">
+    <div class="welcome-header">
+        <img src="/static/Logo.png" alt="Logo de GestIA" width="100" height="100">
+        <h1 class="welcome-title">¡Bienvenido a <span class="accent">GestIA</span>!</h1>
+        <p class="welcome-subtitle">Por el momento podemos enseñarte sobre estos 3 temas. ¿Con cuál quieres empezar?</p>
     </div>
     
-    <div class="row g-4 justify-content-center w-100" style="max-width: 800px;">
-        <div class="col-12 col-sm-6 col-md-4">
-            <button class="topic-card card h-100 w-100 border border-secondary-subtle bg-body-tertiary text-start p-4 rounded-4 topic-btn"
-                    data-topic="abecedario" data-message="Quiero aprender el abecedario en lenguaje de señas">
-                <div class="card-emoji mb-3"></div>
-                <h5 class="fw-bold mb-2">Abecedario</h5>
-                <p class="text-body-secondary small mb-0">Aprende a deletrear cada letra del alfabeto con las manos.</p>
-            </button>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <button class="topic-card card h-100 w-100 border border-secondary-subtle bg-body-tertiary text-start p-4 rounded-4 topic-btn"
-                    data-topic="colores" data-message="Quiero aprender los colores en lenguaje de señas">
-                <h5 class="fw-bold mb-2">Colores</h5>
-                <p class="text-body-secondary small mb-0">Conoce las señas para rojo, azul, verde y muchos más colores.</p>
-            </button>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <button class="topic-card card h-100 w-100 border border-secondary-subtle bg-body-tertiary text-start p-4 rounded-4 topic-btn"
-                    data-topic="expresiones" data-message="Quiero aprender expresiones cotidianas en lenguaje de señas">
-                <h5 class="fw-bold mb-2">Expresiones</h5>
-                <p class="text-body-secondary small mb-0">Frases y saludos del día a día para comunicarte fácilmente.</p>
-            </button>
-        </div>
+    <div class="topics-grid">
+        <button class="topic-card topic-btn"
+                data-topic="abecedario" data-message="Quiero aprender el abecedario en lenguaje de señas">
+            <div class="card-emoji"></div>
+            <h5 class="topic-title">Abecedario</h5>
+            <p class="topic-text">Aprende a deletrear cada letra del alfabeto con las manos.</p>
+        </button>
+        <button class="topic-card topic-btn"
+                data-topic="colores" data-message="Quiero aprender los colores en lenguaje de señas">
+            <h5 class="topic-title">Colores</h5>
+            <p class="topic-text">Conoce las señas para rojo, azul, verde y muchos más colores.</p>
+        </button>
+        <button class="topic-card topic-btn"
+                data-topic="expresiones" data-message="Quiero aprender expresiones cotidianas en lenguaje de señas">
+            <h5 class="topic-title">Expresiones</h5>
+            <p class="topic-text">Frases y saludos del día a día para comunicarte fácilmente.</p>
+        </button>
     </div>
 </div>
 {% endblock %}
