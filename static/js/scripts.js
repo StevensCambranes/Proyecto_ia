@@ -81,8 +81,8 @@ const userInput   = document.getElementById('userInput')
 const sendBtn     = document.getElementById('sendBtn')
 
 const startChat = (initialMessage = null) => {
-    welcomeView.classList.add('d-none')
-    chatHistory.classList.remove('d-none')
+    welcomeView.classList.add('hidden')
+    chatHistory.classList.remove('hidden')
 
     if (initialMessage) {
         appendMessage('user', initialMessage)
@@ -107,7 +107,7 @@ document.querySelectorAll('.topic-btn').forEach(btn => {
 const handleSend = () => {
     const text = userInput.value.trim()
     if (!text) return
-    if (!welcomeView.classList.contains('d-none')) {
+    if (!welcomeView.classList.contains('hidden')) {
         startChat(text)
     } else {
         appendMessage('user', text)
