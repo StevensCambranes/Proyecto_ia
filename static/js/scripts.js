@@ -72,48 +72,48 @@ setInterval(() => {
     }
 }, 1000)
 
-// ===========================
-// CAMBIO DE VISTA: welcome → chat
-// ===========================
-const welcomeView = document.getElementById('welcomeView')
-const chatHistory = document.getElementById('chatHistory')
-const userInput   = document.getElementById('userInput')
-const sendBtn     = document.getElementById('sendBtn')
+// // ===========================
+// // CAMBIO DE VISTA: welcome → chat
+// // ===========================
+// const welcomeView = document.getElementById('welcomeView')
+// const chatHistory = document.getElementById('chatHistory')
+// const userInput   = document.getElementById('userInput')
+// const sendBtn     = document.getElementById('sendBtn')
 
-const startChat = (initialMessage = null) => {
-    welcomeView.classList.add('hidden')
-    chatHistory.classList.remove('hidden')
+// const startChat = (initialMessage = null) => {
+//     welcomeView.classList.add('hidden')
+//     chatHistory.classList.remove('hidden')
 
-    if (initialMessage) {
-        appendMessage('user', initialMessage)
-        setTimeout(() => {
-            appendMessage('bot', `¡Perfecto! Vamos a aprender sobre: <strong>${initialMessage}</strong> 🤙`)
-        }, 600)
-    }
-}
+//     if (initialMessage) {
+//         appendMessage('user', initialMessage)
+//         setTimeout(() => {
+//             appendMessage('bot', `¡Perfecto! Vamos a aprender sobre: <strong>${initialMessage}</strong> 🤙`)
+//         }, 600)
+//     }
+// }
 
-const appendMessage = (sender, text) => {
-    const msgDiv = document.createElement('div')
-    msgDiv.classList.add('message', sender === 'user' ? 'user' : 'bot')
-    msgDiv.innerHTML = `<div class="message-content">${text}</div>`
-    chatHistory.appendChild(msgDiv)
-    chatHistory.scrollTop = chatHistory.scrollHeight
-}
+// const appendMessage = (sender, text) => {
+//     const msgDiv = document.createElement('div')
+//     msgDiv.classList.add('message', sender === 'user' ? 'user' : 'bot')
+//     msgDiv.innerHTML = `<div class="message-content">${text}</div>`
+//     chatHistory.appendChild(msgDiv)
+//     chatHistory.scrollTop = chatHistory.scrollHeight
+// }
 
-document.querySelectorAll('.topic-btn').forEach(btn => {
-    btn.addEventListener('click', () => startChat(btn.getAttribute('data-message')))
-})
+// document.querySelectorAll('.topic-btn').forEach(btn => {
+//     btn.addEventListener('click', () => startChat(btn.getAttribute('data-message')))
+// })
 
-const handleSend = () => {
-    const text = userInput.value.trim()
-    if (!text) return
-    if (!welcomeView.classList.contains('hidden')) {
-        startChat(text)
-    } else {
-        appendMessage('user', text)
-    }
-    userInput.value = ''
-}
+// const handleSend = () => {
+//     const text = userInput.value.trim()
+//     if (!text) return
+//     if (!welcomeView.classList.contains('hidden')) {
+//         startChat(text)
+//     } else {
+//         appendMessage('user', text)
+//     }
+//     userInput.value = ''
+// }
 
-sendBtn.addEventListener('click', handleSend)
-userInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleSend() })
+// sendBtn.addEventListener('click', handleSend)
+// userInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleSend() })

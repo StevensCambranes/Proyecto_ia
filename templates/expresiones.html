@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load cloudinary %}
+
+{% block contenido %}
+<h2>Sección de Expresiones</h2>
+<div class="videos_container">
+    <div class="video_cards">
+        <video controls>
+            <source src="{% cloudinary_url 'Alegre_sep4kx.mp4' resource_type='video' %}" type="video/mp4">
+        </video>
+        <span class="video_title">Alegre</span>
+    </div>
+    
+    <div class="video_cards">
+        <video controls>
+            <source src="{% cloudinary_url 'Actitud_htst8l.mp4' resource_type='video' %}" type="video/mp4">
+        </video>
+        <span class="video_title">Actitud</span>
+    </div>
+    
+    <div class="video_cards">
+        <video controls>
+            <source src="{% cloudinary_url 'Aburrido_lcgrty.mp4' resource_type='video' %}" type="video/mp4">
+        </video>
+        <span class="video_title">Aburrido</span>
+    </div>
+</div>
+{% endblock %}
