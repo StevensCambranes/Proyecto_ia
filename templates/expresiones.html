@@ -3,26 +3,69 @@
 
 {% block contenido %}
 <h2>Sección de Expresiones</h2>
-<div class="videos_container">
-    <div class="video_cards">
-        <video controls>
-            <source src="{% cloudinary_url 'Alegre_sep4kx.mp4' resource_type='video' %}" type="video/mp4">
-        </video>
-        <span class="video_title">Alegre</span>
+
+{% if video_id %}
+    <div class="respuesta-ia" style="text-align: center; margin-bottom: 1rem;">
+        <p><strong>{{ mensaje_ia }}</strong></p>
     </div>
-    
-    <div class="video_cards">
-        <video controls>
-            <source src="{% cloudinary_url 'Actitud_htst8l.mp4' resource_type='video' %}" type="video/mp4">
-        </video>
-        <span class="video_title">Actitud</span>
+    <div class="videos_container">
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url video_id|add:'.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Resultado</span>
+        </div>
     </div>
-    
-    <div class="video_cards">
-        <video controls>
-            <source src="{% cloudinary_url 'Aburrido_lcgrty.mp4' resource_type='video' %}" type="video/mp4">
-        </video>
-        <span class="video_title">Aburrido</span>
+{% else %}
+    <div class="videos_container">
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Alegre_sep4kx.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Alegre</span>
+        </div>
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Actitud_htst8l.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Actitud</span>
+        </div>
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Aburrido_lcgrty.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Aburrido</span>
+        </div>
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Miedoso_kvzvcz.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Miedoso</span>
+        </div>
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Llorar_xkviep.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Llorar</span>
+        </div>
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Humilde_r7kvff.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Humilde</span>
+        </div>
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Orgulloso_dawhst.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Orgulloso</span>
+        </div>
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Paciencia_fzqrqz.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Paciencia</span>
+        </div>
     </div>
-</div>
+{% endif %}
 {% endblock %}

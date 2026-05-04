@@ -132,8 +132,7 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    /* background: var(--bg-primary); */
+    overflow: hidden; /* Esto congela el contenedor y el título */
 }
 
 .welcome-view {
@@ -313,10 +312,14 @@ body {
 /* Tarjeta: caja estructural, bordes redondeados y ocultamiento de desbordes */
 .videos_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 240px));/* Disminuye los límites: mínimo 200px, máximo 240px por tarjeta */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
     justify-content: center;
     gap: 1.5rem;
     padding: 1.5rem 0;
+    /* Nuevas reglas para aislar el scroll */
+    overflow-y: auto;
+    flex-grow: 1;
+    min-height: 0;
 }
 
 /* Reproductor: ocupa el espacio superior sin deformarse */
