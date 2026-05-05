@@ -6,4 +6,5 @@ urlpatterns = [
     path('', include('main.urls')),
     # llamar a mi modulo
     path('', include('expresiones.urls')),
+    path('', include('abecedario.urls')),
 ]
