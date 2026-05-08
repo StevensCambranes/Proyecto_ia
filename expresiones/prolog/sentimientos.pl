@@ -1,13 +1,37 @@
-% Hechos: video(palabra_clave, id_cloudinary).
-
-video(alegre, 'Alegre_sep4kx').
-video(actitud, 'Actitud_htst8l').
-video(aburrido, 'Aburrido_lcgrty').
+% Hechos
+video(aburrido, 'Aburrido_erirmw').
+video(actitud, 'Actitud_lqcatc').
+video(alegre, 'Alegre_ebch0i').
+video(amable, 'Amable_c0bmix').
+video(ansioso, 'Ansioso_wbj4fn').
+video(autoestima, 'Autoestima_ihubwd').
+video(cansado, 'Cansado_zj47dh').
+video(carinoso, 'Carinoso_qoqos1').
+video(creido, 'Creido_apetp3').
+video(deprimido, 'Deprimido_kaxse1').
+video(dolor, 'Dolor_ckymmy').
+video(egoista, 'Egoista_iv3hkg').
+video(emocion, 'Emocion_ct1qbi').
+video(enamorado, 'Enamorado_rphtfq').
+video(enojado, 'Enojado_nxqoul').
 video(miedoso, 'Miedoso_kvzvcz').
 video(llorar, 'Llorar_xkviep').
 video(humilde, 'Humilde_r7kvff').
 video(orgulloso, 'Orgulloso_dawhst').
 video(paciencia, 'Paciencia_fzqrqz').
+video(sentimiento, 'Sentimiento_a0iw5p').
+video(sentir, 'Sentir_wxaci5').
+video(serio, 'Serio_wnshwi').
+video(solitario, 'Solitario_ergmoh').
+video(sonreir, 'Sonreir_e0chyy').
+video(sueno, 'Sueno_cychpo').
+video(sufrir, 'Sufrir_qgxffx').
+video(timido, 'Timido_vegqov').
+video(tranquilo, 'Tranquilo_fptyws').
+video(travieso, 'Travieso_kfn9xu').
+video(triste, 'Triste_y5gnoi').
+video(venganza, 'Venganza_swvk5l').
+video(verguenza, 'Verguenza_atofac').
 
-% Regla: Busca el ID asociado a la palabra ingresada
+% Regla
 buscar(Palabra, ID) :- video(Palabra, ID).

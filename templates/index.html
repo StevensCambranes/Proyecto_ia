@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load cloudinary %}
+
 {% block contenido %}
 <div class="chat-history hidden" id="chatHistory"></div>
 
@@ -12,17 +13,20 @@
     
     <div class="topics-grid">
         <a href="{% url 'ruta_abecedario' %}" class="topic-card topic-btn">
-            <h5 class="topic-title">Abecedario</h5>
-            <p class="topic-text">Aprende a deletrear cada letra del alfabeto con las manos.</p>
+            <h5 class="topic-title">Aprender el abecedario</h5>
+            <p class="topic-text"><span class="accent">Presiona para</span> aprende a deletrear cada letra del alfabeto con las manos.</p>
         </a>
         <a class="topic-card topic-btn">
-            <h5 class="topic-title">Colores</h5>
-            <p class="topic-text">Conoce las señas para rojo, azul, verde y muchos más colores.</p>
+            <h5 class="topic-title">Aprender los colores</h5>
+            <p class="topic-text"><span class="accent">Presiona para</span> conocer las señas para rojo, azul, verde y muchos más colores.</p>
         </a>
         <a href="{% url 'ruta_expresiones' %}" class="topic-card topic-btn">
-            <h5 class="topic-title">Expresiones</h5>
-            <p class="topic-text">Conoce las expresiones y sentimientos de las personas.</p>
+            <h5 class="topic-title">Aprender las emociones</h5>
+            <p class="topic-text"><span class="accent">Presiona para</span> conocer las emociones y sentimientos de las personas.</p>
         </a>
     </div>
 </div>
+{% endblock %}
+
+{% block buscador %}
 {% endblock %}

@@ -2,9 +2,11 @@
 {% load cloudinary %}
 
 {% block contenido %}
-<div style="display: flex; align-items: center; gap: 15px;">
-    <h2 style="margin: 0;">Sección de Abecedario</h2>
-    {% cloudinary 'Logo_wcgzda.png' quality="auto" alt="Logo de GestIA" width="50" height="50" %}
+<div>
+    <a href="{% url 'inicio' %}" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit;">
+        <h2 style="margin: 0;">Sección de Abecedario</h2>
+        {% cloudinary 'Logo_wcgzda.png' quality="auto" alt="Logo de GestIA" width="50" height="50"%}
+    </a>
 </div>
 
 {% if video_id %}

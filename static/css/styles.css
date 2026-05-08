@@ -8,7 +8,7 @@
     --border-color: #000000;
     --text-primary: #1E293B;
     --text-secondary: #64748B;
-    --accent-color: #1E293B;
+    --accent-color: #c45858;
     --accion: #9bcfd2;
 }
 
@@ -97,6 +97,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     margin-top: 1rem;
+    flex-wrap: wrap; /* Permite que los puntos formen una segunda línea si no caben */
 }
 
 .fact-dot {
@@ -340,4 +341,73 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     display: block;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.app-footer {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+}
+
+/* ===========================
+   RESPONSIVE (MÓVILES Y TABLETS)
+=========================== */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: 100vh; /* Fija la altura total a la pantalla del dispositivo */
+        overflow: hidden; /* Evita que el celular haga scroll global */
+    }
+
+    .sidebar {
+        display: none; /* Elimina la caja de la vista móvil */
+    }
+
+    #factCard {
+        height: 180px;
+        font-size: 1rem;
+    }
+
+    .chat-container {
+        overflow: hidden; /* Congela el contenedor para anclar el input abajo */
+    }
+
+    .videos_container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        overflow-y: auto; /* Activa el scroll únicamente para la sección de videos */
+        padding: 1rem;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+
+    .welcome-view {
+        padding: 1.5rem 1rem;
+        justify-content: flex-start; /* Ancla el logo a la parte superior */
+        overflow-y: auto; /* Habilita el scroll para ver la última tarjeta */
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .send-button {
+        width: 100%;
+    }
+
+    .app-footer {
+        font-size: 0.65rem; /* Letra más pequeña para el móvil */
+        padding: 0.3rem 0.5rem; /* Menor espacio de relleno */
+        line-height: 1.2; /* Comprime el espacio entre renglones */
+    }
 }
