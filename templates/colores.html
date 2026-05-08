@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load cloudinary %}
+
+{% block contenido %}
+<!-- rlopezl24@miumg.edu.gt -->
+<!-- aesquits@miumg.edu.gt -->
+<!-- pquiroam@miumg.edu.gt -->
+<div>
+    <a href="{% url 'inicio' %}" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit;">
+        <h2 style="margin: 0;">Sección de Expresiones</h2>
+        {% cloudinary 'Logo_wcgzda.png' quality="auto" alt="Logo de GestIA" width="50" height="50"%}
+    </a>
+</div>
+
+{% if video_id %}
+    <div class="respuesta-ia" style="text-align: center; margin-bottom: 1rem;">
+        <p><strong>{{ mensaje_ia }}</strong></p>
+    </div>
+    <div class="videos_container">
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url video_id|add:'.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">{{ titulo_video|default:'Resultado' }}</span>
+        </div>
+    </div>
+{% else %}
+    <div class="videos_container">
+        <!-- Parte Ruben Lopez -->
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'anaranjado_ciutcz.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Anaranjado</span>
+        </div>
+        
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'blanco_xoad3b.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Blanco</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'beige_p8phnw.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Beige</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'bronce_eliwpy.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Bronce</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'azul_yg2ydu.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Azul</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'cafe_sz9ixl.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Cafe</span>
+        </div>
+
+        <!-- Parte Aron Squit -->
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Corinto_prpbec.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Corinto</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Gris_ox8gjz.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Gris</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Morado_ihz2lo.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Morado</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Lila_mrtmdu.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Lila</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Dorado_lxbo7x.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Dorado</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Celeste_dxlega.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Celeste</span>
+        </div>
+
+        <!-- Parte Pablo Quiroa -->
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Negro_n8ymsf.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Negro</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Rojo_h4e23h.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Rojo</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Turquesa_hiuw1o.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Turquesa</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Verde_lgabfe.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Verde</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Rosado_pjryjh.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Rosado</span>
+        </div>
+
+        <div class="video_cards">
+            <video controls>
+                <source src="{% cloudinary_url 'Plateado_ufzgmx.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Plateado</span>
+        </div>
+
+    </div>
+{% endif %}
+{% endblock %}
