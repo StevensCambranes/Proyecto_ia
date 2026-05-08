@@ -1,7 +1,12 @@
-// ===========================
 // DATOS CURIOSOS ROTATIVOS
-// ===========================
 const facts = [
+    'La gramática de las lenguas de señas utiliza el <strong>espacio tridimensional</strong> para definir pronombres y tiempos verbales.',
+    'En la cultura sorda, los nombres propios se sustituyen por una <strong>"seña personal"</strong> basada en un rasgo físico o de carácter.',
+    'El orden lógico de una oración en señas suele ser <strong>Tema-Comentario</strong>, a diferencia del Sujeto-Verbo-Objeto del español oral.',
+    'Transmitir un mensaje mediante lengua de señas es <strong>exactamente igual de rápido</strong> que hacerlo mediante la voz.',
+    'La Lengua de Señas Guatemalteca (LSGT) posee <strong>variantes regionales</strong>; una seña puede cambiar entre la capital y los departamentos.',
+    'Las personas sordociegas se comunican utilizando <strong>lengua de señas táctil</strong>, sintiendo los movimientos en las manos de su interlocutor.',
+    'Levantar la voz no ayuda a una persona sorda; la clave de la comunicación es mantener el <strong>contacto visual</strong>.',
     'Existen más de <strong>300 lenguas de señas</strong> distintas en el mundo, cada una con su propia gramática y vocabulario.',
     'Las lenguas de señas son procesadas por el <strong>mismo hemisferio del cerebro</strong> que las lenguas habladas.',
     'No solo importan las manos: la <strong>expresión facial y el cuerpo</strong> también forman parte de la gramática.',
@@ -71,49 +76,3 @@ setInterval(() => {
         goToFact((currentIndex + 1) % facts.length)
     }
 }, 1000)
-
-// // ===========================
-// // CAMBIO DE VISTA: welcome → chat
-// // ===========================
-// const welcomeView = document.getElementById('welcomeView')
-// const chatHistory = document.getElementById('chatHistory')
-// const userInput   = document.getElementById('userInput')
-// const sendBtn     = document.getElementById('sendBtn')
-
-// const startChat = (initialMessage = null) => {
-//     welcomeView.classList.add('hidden')
-//     chatHistory.classList.remove('hidden')
-
-//     if (initialMessage) {
-//         appendMessage('user', initialMessage)
-//         setTimeout(() => {
-//             appendMessage('bot', `¡Perfecto! Vamos a aprender sobre: <strong>${initialMessage}</strong> 🤙`)
-//         }, 600)
-//     }
-// }
-
-// const appendMessage = (sender, text) => {
-//     const msgDiv = document.createElement('div')
-//     msgDiv.classList.add('message', sender === 'user' ? 'user' : 'bot')
-//     msgDiv.innerHTML = `<div class="message-content">${text}</div>`
-//     chatHistory.appendChild(msgDiv)
-//     chatHistory.scrollTop = chatHistory.scrollHeight
-// }
-
-// document.querySelectorAll('.topic-btn').forEach(btn => {
-//     btn.addEventListener('click', () => startChat(btn.getAttribute('data-message')))
-// })
-
-// const handleSend = () => {
-//     const text = userInput.value.trim()
-//     if (!text) return
-//     if (!welcomeView.classList.contains('hidden')) {
-//         startChat(text)
-//     } else {
-//         appendMessage('user', text)
-//     }
-//     userInput.value = ''
-// }
-
-// sendBtn.addEventListener('click', handleSend)
-// userInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleSend() })
