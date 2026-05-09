@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-$x4wrubbo13%wnua7%6_uh+@8y@&e5c#@v4&!ber1&gj#!&6(=
 # DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['proyectoia-production-3e34.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['proyectoia-production-90ef.up.railway.app', '.railway.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -126,7 +126,8 @@ STATICFILES_DIRS = [
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
-    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET')
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+    'SECURE': True
 }
 # hacer cloudinary el almacenamiento de archivos predeterminado
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
