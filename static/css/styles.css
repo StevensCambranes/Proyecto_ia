@@ -360,10 +360,10 @@ body {
 @media (max-width: 768px) {
     body {
         flex-direction: column;
-        height: 100vh; /* Fija la altura total a la pantalla del dispositivo */
-        overflow: hidden; /* Evita que el celular haga scroll global */
+        height: 100dvh; /* Cambiado de vh a dvh */
+        overflow: auto; /* Permite scroll si el contenido sobrepasa la pantalla */
     }
-
+    
     .sidebar {
         display: none; /* Elimina la caja de la vista móvil */
     }
@@ -374,7 +374,8 @@ body {
     }
 
     .chat-container {
-        overflow: hidden; /* Congela el contenedor para anclar el input abajo */
+        height: auto;
+        min-height: calc(100dvh - 50px); /* Asegura espacio para el footer */
     }
 
     .videos_container {
