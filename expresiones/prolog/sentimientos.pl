@@ -31,7 +31,7 @@ video(respetar, 'Respetar_qvl2bl').
 video(sentimiento, 'Sentimiento_a0iw5p').
 video(sentir, 'Sentir_wxaci5').
 video(serio, 'Serio_wnshwi').
-video(solitario, 'Solitario_ergmoh').
+video(solitario, 'Solitario_qeauk5').
 video(sonreir, 'Sonreir_e0chyy').
 video(sueno, 'Sueno_cychpo').
 video(sufrir, 'Sufrir_qgxffx').
@@ -39,6 +39,7 @@ video(timido, 'Timido_vegqov').
 video(tranquilo, 'Tranquilo_fptyws').
 video(travieso, 'Travieso_kfn9xu').
 video(triste, 'Triste_y5gnoi').
+video(valiente, 'Valiente_vnhjsd').
 video(venganza, 'Venganza_swvk5l').
 video(verguenza, 'Verguenza_atofac').
 

@@ -223,7 +223,7 @@
         </div>
         <div class="video_cards">
             <video controls>
-                <source src="{% cloudinary_url 'Solitario_ergmoh.mp4' resource_type='video' %}" type="video/mp4">
+                <source src="{% cloudinary_url 'Solitario_qeauk5.mp4' resource_type='video' %}" type="video/mp4">
             </video>
             <span class="video_title">Solitario</span>
         </div>
@@ -271,6 +271,12 @@
         </div>
         <div class="video_cards">
             <video controls>
+                <source src="{% cloudinary_url 'Valiente_vnhjsd.mp4' resource_type='video' %}" type="video/mp4">
+            </video>
+            <span class="video_title">Valiente</span>
+        </div>
+        <div class="video_cards">
+            <video controls>
                 <source src="{% cloudinary_url 'Venganza_swvk5l.mp4' resource_type='video' %}" type="video/mp4">
             </video>
             <span class="video_title">Venganza</span>
@@ -282,5 +288,17 @@
             <span class="video_title">Vergüenza</span>
         </div>
     </div>
+{% endif %}
+{% if mensaje_ia and not video_id %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    Swal.fire({
+        title: 'Aviso',
+        text: '{{ mensaje_ia|escapejs }}',
+        icon: 'info',
+        confirmButtonColor: '#9bcfd2', 
+        confirmButtonText: 'Entendido'
+    });
+</script>
 {% endif %}
 {% endblock %}
