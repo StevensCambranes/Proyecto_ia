@@ -23,7 +23,7 @@ def vista_expresiones(request):
                 titulo_video = consulta_original.title()
                 mensaje = f"Si deseas aprender la expresión {consulta_original.lower()} es de la siguiente manera:"
             else:
-                mensaje = "Sigo aprendiendo, prueba con las expresiones que están aquí."
+                mensaje = "Sigo aprendiendo, prueba con las opciones que están aquí."
         except Exception:
             mensaje = "Error técnico al procesar la consulta."
 
