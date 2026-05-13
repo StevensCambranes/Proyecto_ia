@@ -6,7 +6,7 @@ video(amable, 'Amable_c0bmix').
 video(ansioso, 'Ansioso_wbj4fn').
 video(autoestima, 'Autoestima_ihubwd').
 video(cansado, 'Cansado_zj47dh').
-video(carinoso, 'Carinoso_qoqos1').
+video('cariñoso', 'Carinoso_qoqos1').
 video(creido, 'Creido_apetp3').
 video(deprimido, 'Deprimido_kaxse1').
 video(dolor, 'Dolor_ckymmy').
