@@ -7,8 +7,9 @@ prolog.consult("expresiones/prolog/sentimientos.pl")
 
 def vista_expresiones(request):
     consulta_original = request.GET.get('consulta', '').strip()
-    # Limpieza: mantiene solo letras para la consulta de Prolog
-    consulta_limpia = "".join(filter(str.isalpha, consulta_original.lower()))
+    # Estandariza vocales con tilde y ñ, luego elimina puntuación y espacios
+    consulta_limpia = consulta_original.lower().replace('ñ', 'n').replace('á', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u').replace('ü', 'u')
+    consulta_limpia = "".join(filter(str.isalpha, consulta_limpia))
     
     video_encontrado = None
     mensaje = ""
