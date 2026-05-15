@@ -12,7 +12,7 @@ def vista_abecedario(request):
         prolog.consult("abecedario/prolog/abecedario.pl")
         # Ejecuta la regla buscar/2 inyectando la palabra del usuario
         try:
-            resultados = list(prolog.query(f"buscar({consulta}, ID)"))
+            resultados = list(prolog.query(f"buscar_abecedario({consulta}, ID)"))
             if resultados:
                 video_encontrado = resultados[0]["ID"]
                 titulo_video = consulta.title()

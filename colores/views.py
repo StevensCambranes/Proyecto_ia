@@ -12,7 +12,7 @@ def vista_colores(request):
         prolog.consult("colores/prolog/colores.pl")
         # Ejecuta la regla buscar/2 inyectando la palabra del usuario
         try:
-            resultados = list(prolog.query(f"buscar({consulta}, ID)"))
+            resultados = list(prolog.query(f"buscar_colores({consulta}, ID)"))
             if resultados:
                 video_encontrado = resultados[0]["ID"]
                 titulo_video = consulta.title()
